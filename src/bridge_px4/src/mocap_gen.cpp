@@ -7,7 +7,7 @@ MocapGen::MocapGen()
     pose_curr_sub = nh.subscribe("gazebo/model_states",1,&MocapGen::pose_cb,this);
 
     // Publish to mavros/vision_pose/pose
-    string drone_topic = "drone1/mavros/vision_pose/pose";
+    string drone_topic = "drone2/mavros/vision_pose/pose";
     pose_curr_pub = nh.advertise<geometry_msgs::PoseStamped>(drone_topic,1);
 
     ROS_INFO("ROS Publishers Initialized");

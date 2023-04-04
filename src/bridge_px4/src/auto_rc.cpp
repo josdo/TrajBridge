@@ -8,8 +8,8 @@ Auto_RC::Auto_RC()
     att_sp_sub  = nh.subscribe("setpoint/attitude",1,&Auto_RC::att_sp_cb,this);
 
     // Setup ROS Services
-    arming_client = nh.serviceClient<mavros_msgs::CommandBool>("/drone1/mavros/cmd/arming");
-    set_mode_client = nh.serviceClient<mavros_msgs::SetMode>("/drone1/mavros/set_mode");
+    arming_client = nh.serviceClient<mavros_msgs::CommandBool>("/drone2/mavros/cmd/arming");
+    set_mode_client = nh.serviceClient<mavros_msgs::SetMode>("/drone2/mavros/set_mode");
     
     // Take Off
     rc_takeoff_sequence();
